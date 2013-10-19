@@ -24,7 +24,7 @@ public partial class kontakt : System.Web.UI.Page
         cmd.Connection = conn;
 
         // SQL strengen
-        cmd.CommandText = "INSERT INTO beskeder (fornavn, email, besked, efternavn, emne) VALUES (@fornavn, @efternavn, @besked, @efternavn, @emne)";
+        cmd.CommandText = "INSERT INTO musicon.beskeder (fornavn, email, besked, efternavn, emne) VALUES (@fornavn, @efternavn, @besked, @efternavn, @emne)";
 
         // Tilføj parametrer (input fra brugeren / TextBox fra .aspx siden) til din SQL streng
         cmd.Parameters.Add("@fornavn", SqlDbType.NVarChar).Value = fornavn.Text;

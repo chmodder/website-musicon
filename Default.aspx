@@ -5,7 +5,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
 
-    <asp:SqlDataSource ID="SqlDataSourceTopEvent" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 * FROM [events] ORDER BY [eventDato] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceTopEvent" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 1 * FROM [musicon].[events] ORDER BY [eventDato] DESC"></asp:SqlDataSource>
 
     <asp:Repeater ID="RepeaterTopEvent" runat="server" DataSourceID="SqlDataSourceTopEvent">
         <ItemTemplate>
@@ -22,7 +22,7 @@
     <a href="Kaffecyklen.aspx" id="forsideKaffecyklen" class="wideBox height160"></a>
     <!--forsideKaffecyklen-wideBox height160-->
 
-    <asp:SqlDataSource ID="SqlDataSourceAlleNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 2 * FROM [nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceAlleNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT TOP 2 * FROM [musicon].[nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
 
     <asp:Repeater ID="RepeaterNyheder" runat="server" DataSourceID="SqlDataSourceAlleNyheder">
 
