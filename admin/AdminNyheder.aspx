@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSourceAdminNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [musicon].[nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceAdminNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
 
 
     <a href="Default.aspx">Administrator Forside</a>

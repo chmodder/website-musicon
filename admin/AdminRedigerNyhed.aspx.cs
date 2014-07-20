@@ -25,7 +25,7 @@ public partial class admin_adminRedigerNyhed : System.Web.UI.Page
             //    @urlId = "1";
             //}
             // SQL strengen
-            cmd.CommandText = "SELECT * FROM musicon.nyheder WHERE Id = @brian";
+            cmd.CommandText = "SELECT * FROM nyheder WHERE Id = @brian";
             cmd.Parameters.Add("@brian", SqlDbType.Int).Value = Request.QueryString["nyhedsId"];
             //ben for forbindelsen til databasen
             conn.Open();
@@ -56,7 +56,7 @@ public partial class admin_adminRedigerNyhed : System.Web.UI.Page
         cmd.Connection = conn;
 
         //Sql	sætningen
-        cmd.CommandText = "UPDATE musicon.nyheder SET overskrift=@overskrift, manchet=@manchet, tekst=@tekst, forfatter=@forfatter, img=@img, lastChanged=@lastChanged WHERE Id =@id";
+        cmd.CommandText = "UPDATE nyheder SET overskrift=@overskrift, manchet=@manchet, tekst=@tekst, forfatter=@forfatter, img=@img, lastChanged=@lastChanged WHERE Id =@id";
         //Opdaterer tabellen "nyheder" og indstiller rækkerne til det som variblerne (f.x. @overskrift) henviser til.
 
         //	Parametrene	@brugernavn	og	@password	i	sql	sætningen	ovenover	tilføjes

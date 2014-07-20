@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSourceAlleNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [musicon].[nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceAlleNyheder" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [nyheder] ORDER BY [oprettetDen] DESC"></asp:SqlDataSource>
 
     <asp:Repeater ID="RepeaterNyheder" runat="server" DataSourceID="SqlDataSourceAlleNyheder">
 

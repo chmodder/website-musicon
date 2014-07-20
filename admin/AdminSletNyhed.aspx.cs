@@ -23,7 +23,7 @@ public partial class admin_AdminSletNyhed : System.Web.UI.Page
         //    @urlId = "1";
         //}
         // SQL strengen
-        cmd.CommandText = "SELECT * FROM musicon.nyheder WHERE Id = @urlId";
+        cmd.CommandText = "SELECT * FROM nyheder WHERE Id = @urlId";
         cmd.Parameters.Add("@urlId", SqlDbType.Int).Value = Request.QueryString["nyhedsId"];
         //ben for forbindelsen til databasen
         conn.Open();
@@ -57,7 +57,7 @@ public partial class admin_AdminSletNyhed : System.Web.UI.Page
         cmd.Connection = conn;
 
         //Sql	sætningen
-        cmd.CommandText = "DELETE	FROM musicon.nyheder WHERE	Id = @urlId";
+        cmd.CommandText = "DELETE	FROM nyheder WHERE	Id = @urlId";
 
         //	Parametrene	@brugernavn	og	@password	i	sql	sætningen	ovenover	tilføjes. WHAT??!
         cmd.Parameters.Add("@urlId", SqlDbType.Int).Value = Request.QueryString["nyhedsId"];

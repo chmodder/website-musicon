@@ -25,7 +25,7 @@ public partial class admin_adminOpretNyhed : System.Web.UI.Page
         cmd.Connection = conn;
 
         // SQL strengen
-        cmd.CommandText = "INSERT INTO musicon.nyheder (overskrift, manchet, tekst, forfatter, img) VALUES (@overskrift, @manchet, @tekst, @forfatter, @img)";
+        cmd.CommandText = "INSERT INTO nyheder (overskrift, manchet, tekst, forfatter, img) VALUES (@overskrift, @manchet, @tekst, @forfatter, @img)";
 
         // Tilføj parametrer (input fra brugeren / TextBox fra .aspx siden) til din SQL streng
         cmd.Parameters.Add("@overskrift", SqlDbType.NVarChar).Value = opretOverskrift.Text;
