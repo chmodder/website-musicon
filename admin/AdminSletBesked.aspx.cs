@@ -23,7 +23,7 @@ public partial class admin_AdminSletBesked : System.Web.UI.Page
         //    @urlId = "1";
         //}
         // SQL strengen
-        cmd.CommandText = "SELECT * FROM beskeder WHERE Id = @urlId";
+        cmd.CommandText = "SELECT * FROM musicon.beskeder WHERE Id = @urlId";
         cmd.Parameters.Add("@urlId", SqlDbType.Int).Value = Request.QueryString["beskedId"];
         //ben for forbindelsen til databasen
         conn.Open();
@@ -57,7 +57,7 @@ public partial class admin_AdminSletBesked : System.Web.UI.Page
         cmd.Connection = conn;
 
         //Sql	sætningen
-        cmd.CommandText = "DELETE  FROM beskeder WHERE	Id = @urlId";
+        cmd.CommandText = "DELETE  FROM musicon.beskeder WHERE	Id = @urlId";
 
         //	Parametrene	@brugernavn	og	@password	i	sql	sætningen	ovenover	tilføjes
         cmd.Parameters.Add("@urlId", SqlDbType.Int).Value = Request.QueryString["beskedId"];

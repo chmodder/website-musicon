@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderMain" runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSourceHej" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [nyheder] WHERE ([Id] = @knud)">
+    <asp:SqlDataSource ID="SqlDataSourceHej" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [musicon].[nyheder] WHERE ([Id] = @knud)">
         <SelectParameters>
             <asp:QueryStringParameter Name="knud" DefaultValue="1" QueryStringField="nyhedsId" Type="Int32" />
         </SelectParameters>
